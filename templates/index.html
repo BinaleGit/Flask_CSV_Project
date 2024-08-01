@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>Data from CSV File</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Family History with Overweight</th>
+                <th>Obesity Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.Age }}</td>
+                    <td>{{ row.Gender }}</td>
+                    <td>{{ row.Height }}</td>
+                    <td>{{ row.Weight }}</td>
+                    <td>{{ row.family_history_with_overweight }}</td>
+                    <td>{{ row.NObeyesdad }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
